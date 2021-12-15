@@ -1,0 +1,11 @@
+<h2>Movie lists</h2>
+<ul>
+<% @movie.lists.each do |list| %>
+<% bookmark = Bookmark.find_by(list: @list, movie: movie) %>
+      <div class="col-12 col-sm-6 mb-4" data-aos="zoom-in">
+        <div class="bg-white rounded shadow h-100">
+          <%= image_tag movie.poster_url, alt: movie.title, class: 'movie-img rounded-top' %>
+          <div class="p-3 rounded-bottom d-flex flex-column">
+            <li> <%= list.content %> <%= link_to 'X', list_path(list) %></li>
+<% end %>
+</ul>

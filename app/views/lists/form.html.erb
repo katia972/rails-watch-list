@@ -1,0 +1,8 @@
+<%= simple_form_for(list, html: {class: "form body"} do |f|) %>
+<%= form.label :name, class: 'w-100' %>
+<div class="form-control-contenair">
+<%= form.text_field :name, class: 'form_control w-70 raduis 12' %>
+<%= form.submit class: 'btn btn-gradient w-20' %>
+</div>
+<%= form.input :photo, as: :file %>
+<%= end %>

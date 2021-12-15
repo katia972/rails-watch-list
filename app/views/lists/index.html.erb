@@ -1,0 +1,14 @@
+ <ul>
+<% @lists.each do |list| %>
+
+<li><%= link_to list.name, list_path(list), class'list-link' do %></li>
+<article class="d flex align-items-end"
+style='backgroung-image: linear-gardient(rgba(0,0,0,0), rgba(0,0,0,0.3)), url
+('<% if list.image_url %>
+<%= list.image_url %>
+<% else %><%= cl_image_path
+list.photo.record.image_url %><%= end %>');"
+<h2> <%= list.name %></h2>
+</article>
+<% end %>
+</ul>
